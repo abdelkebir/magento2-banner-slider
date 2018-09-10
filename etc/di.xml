@@ -1,0 +1,15 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="godogi_bannerslider_banner_listing_data_source" xsi:type="string">Godogi\BannerSlider\Model\ResourceModel\Banner\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Godogi\BannerSlider\Model\ResourceModel\Banner\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">godogi_bannerslider_banner</argument>
+            <argument name="resourceModel" xsi:type="string">Godogi\BannerSlider\Model\ResourceModel\Banner</argument>
+        </arguments>
+    </virtualType>
+</config>
