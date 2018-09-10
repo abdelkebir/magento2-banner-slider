@@ -38,7 +38,7 @@ class InstallSchema implements InstallSchemaInterface
 	        'Created At'
 	     )->addColumn(
             'order',
-            Table::TYPE_INTEGER,
+            \Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
             null,
             ['nullable' => false],
             'Order'
