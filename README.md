@@ -12,8 +12,6 @@ The Simplest Magento 2 Banner Slider Module. (Not Ready Yet)
 
 4. bin/magento setup:di:compile
 
-If using OpCache, please clear cache.
-
 
 ## Compatibility
 
