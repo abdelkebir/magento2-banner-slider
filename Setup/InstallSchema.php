@@ -118,6 +118,6 @@ class InstallSchema implements InstallSchemaInterface
 			->setComment('Banner Slider Link');
 			$setup->getConnection()->createTable($table);
 		}
-		setup->endSetup();
+		$setup->endSetup();
 	}
 }
