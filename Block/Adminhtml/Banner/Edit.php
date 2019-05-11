@@ -33,7 +33,7 @@ class Edit extends Container
 	{
   		$this->_objectId = 'id';
   		$this->_controller = 'adminhtml_banner';
-  		$this->_blockGroup = 'Godogi_Banner';
+  		$this->_blockGroup = 'Godogi_BannerSlider';
   		parent::_construct();
   		$this->buttonList->update('save', 'label', __('Save'));
   		$this->buttonList->add(

@@ -1,6 +1,8 @@
 <?php
-namespace Godogi\Pos\Controller\Adminhtml\Banner;
+namespace Godogi\BannerSlider\Controller\Adminhtml\Banner;
+
 use Godogi\BannerSlider\Controller\Adminhtml\Banner;
+
 class Edit extends Banner
 {
 	/**

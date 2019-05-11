@@ -5,6 +5,7 @@ class Create extends Banner
 {
   	public function execute()
   	{
+        
   		  $this->_forward('edit');
   	}
 }
