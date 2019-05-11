@@ -8,7 +8,16 @@ class Save extends Banner
 	*/
 	public function execute()
 	{
+		/*
+		echo '<pre>';
+		print_r( $this->getRequest()->getPostValue());
+		echo '<pre>';
+		exit();
+		return;
+		*/
+
 		$isBanner = $this->getRequest()->getBanner();
+
 		if ($isBanner) {
   			$bannerModel = $this->_bannerFactory->create();
   			$bannerId = $this->getRequest()->getParam('banner_id');
@@ -23,8 +32,20 @@ class Save extends Banner
   			exit();
   			return;
   			*/
+
+
   			$bannerModel->setData($formData);
   			try {
+						$target = $this->_mediaDirectory->getAbsolutePath('godogi/bannerslider/banner/');
+						/** @var $uploader \Magento\MediaStorage\Model\File\Uploader */
+						$uploader = $this->_fileUploaderFactory->create(
+								['fileId' => 'img']
+						);
+						$uploader->setAllowedExtensions(
+								['jpg', 'jpeg', 'png']
+						);
+						$uploader->setAllowRenameFiles(true);
+						$resul = $uploader->save($target);
     				// Save banner
     				$bannerModel->save();
     				// Display success message
