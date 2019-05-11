@@ -1,6 +1,7 @@
 <?php
 namespace Godogi\BannerSlider\Controller\Adminhtml;
 
+use Magento\Backend\App\Action;
 use Magento\Framework\View\Result\PageFactory;
 use Magento\Backend\App\Action\Context;
 
@@ -26,9 +27,7 @@ class Banner extends Action
 	public function __construct(
 		Context $context,
 		PageFactory $resultPageFactory,
-    BannerFactory $bannerFactory,
-	)
-	{
+    BannerFactory $bannerFactory){
 		parent::__construct($context);
 		$this->_resultPageFactory = $resultPageFactory;
     $this->_bannerFactory = $bannerFactory;

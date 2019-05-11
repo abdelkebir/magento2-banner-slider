@@ -14,36 +14,42 @@ class InstallSchema implements InstallSchemaInterface
 		if (!$setup->tableExists('godogi_bannerslider_banner')){
 			$table = $setup->getConnection()->newTable($setup->getTable('godogi_bannerslider_banner'))
 			->addColumn(
-				'banner_id',
-				Table::TYPE_INTEGER,
-				null,
-				['identity' => true, 'unsigned' => true, 'nullable' => false, 'primary' => true],
-				'Banner Id')
+					'banner_id',
+					Table::TYPE_INTEGER,
+					null,
+					['identity' => true, 'unsigned' => true, 'nullable' => false, 'primary' => true],
+					'Banner Id'
+			)->addColumn(
+          'status',
+          \Magento\Framework\DB\Ddl\Table::TYPE_BOOLEAN,
+          null,
+          ['nullable' => false],
+          'Status'
+      )->addColumn(
+					'url',
+					Table::TYPE_TEXT,
+					500,
+					[],
+					'URL'
+			)->addColumn(
+					'img',
+					Table::TYPE_TEXT,
+					500,
+					[],
+					'Image'
+			)->addColumn(
+					'created_at',
+					Table::TYPE_TIMESTAMP,
+					null,
+					['nullable' => false, 'default' => Table::TIMESTAMP_INIT],
+					'Created At')
 			->addColumn(
-				'url',
-				Table::TYPE_TEXT,
-				500,
-				[],
-				'URL')
-			->addColumn(
-				'img',
-				Table::TYPE_TEXT,
-				500,
-				[],
-				'Image')
-			->addColumn(
-				'created_at',
-				Table::TYPE_TIMESTAMP,
-				null,
-				['nullable' => false, 'default' => Table::TIMESTAMP_INIT],
-				'Created At')
-			->addColumn(
-				'updated_at',
-				Table::TYPE_TIMESTAMP,
-				null,
-				['nullable' => false, 'default' => Table::TIMESTAMP_INIT_UPDATE],
-				'Updated At')
-			->setComment('Banners');
+					'updated_at',
+					Table::TYPE_TIMESTAMP,
+					null,
+					['nullable' => false, 'default' => Table::TIMESTAMP_INIT_UPDATE],
+					'Updated At'
+			)->setComment('Banners');
 			$setup->getConnection()->createTable($table);
 		}
 		if (!$setup->tableExists('godogi_bannerslider_slider')){

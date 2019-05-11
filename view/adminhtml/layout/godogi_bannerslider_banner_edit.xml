@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+	<body>
+		<referenceContainer name="left">
+			<block class="Godogi\BannerSlider\Block\Adminhtml\Banner\Edit\Tabs" name="godogi_bannerslider_banner.edit.tabs"/>
+		</referenceContainer>
+		<referenceContainer name="content">
+			<block class="Godogi\BannerSlider\Block\Adminhtml\Banner\Edit" name="godogi_bannerslider_banner.edit"/>
+		</referenceContainer>
+	</body>
+</page>

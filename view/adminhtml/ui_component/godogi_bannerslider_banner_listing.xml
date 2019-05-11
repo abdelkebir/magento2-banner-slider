@@ -10,11 +10,11 @@
                 <item name="name" xsi:type="string">add</item>
                 <item name="label" xsi:type="string" translate="true">Add New Banner</item>
                 <item name="class" xsi:type="string">primary</item>
-                <item name="url" xsi:type="string">*/*/new</item>
+                <item name="url" xsi:type="string">*/*/create</item>
             </item>
         </item>
     </argument>
-    <dataSource name="nameOfDataSource">    
+    <dataSource name="nameOfDataSource">
         <argument name="dataProvider" xsi:type="configurableObject">
             <argument name="class" xsi:type="string">Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider</argument>
             <argument name="name" xsi:type="string">godogi_bannerslider_banner_listing_data_source</argument>
@@ -136,5 +136,5 @@
             </argument>
         </column>
     </columns>
-    
+
 </listing>
