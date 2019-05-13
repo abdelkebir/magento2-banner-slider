@@ -7,6 +7,7 @@ use Magento\Backend\App\Action\Context;
 use Magento\Framework\Registry;
 use Magento\MediaStorage\Model\File\UploaderFactory;
 use Magento\Framework\Filesystem;
+use Magento\Framework\App\Filesystem\DirectoryList;
 
 use Godogi\BannerSlider\Model\BannerFactory;
 
